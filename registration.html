@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(238, 175, 192);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        #logbox {
+            /* height: 550px; */
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            /* border-radius: 10px;  */
+        }
+
+        h3 {
+            align-self: center;
+
+            color: rgb(52, 132, 179);
+        }
+
+        .form {
+            width: 90%;
+            justify-self: center;
+
+        }
+
+        #submit {
+            height: 40px;
+            width: 100%;
+            background-color: rgb(52, 132, 179);
+            color: aliceblue;
+            border: 0px;
+
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number],
+        input[type=password] {
+            width: 100%;
+            height: 40px;
+            /* padding: 12px 20px; */
+            /* margin: 8px; */
+            /* display: inline-block;
+        border: 1px solid #ccc; */
+            box-sizing: border-box;
+        }
+
+        /* input[type=radio],label{
+            margin-right:20px;
+
+        } */
+
+        .inmain {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .sep {
+            width: 10%;
+        }
+
+        /* .genmain {
+            display: flex;
+            margin-top: 15px;
+        } */
+
+        input {
+            margin-left: 0px;
+        }
+
+        .div {
+            /* margin: 5px; */
+            width: 100%;
+        }
+
+        @media screen and (max-width:500px) {
+            .inmain {
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+            }
+
+            /* .genmain {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        } */
+            /* #logbox {
+
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        } */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="firstdiv">
+
+        <div class="nav">
+            <div class="logodiv">
+                <a href="index.html"><img src="images/myntra-1200x900.webp" height="100%" width="100%"></a>
+            </div>
+            <div class="nav2">
+                <div class="navbuttons">
+                    <a href="mens.html"><button class="btnnav">MEN</button></a>
+                </div>
+                <div class="navbuttons">
+                    <a href="womens.html"><button class="btnnav">WOMEN</button></a>
+                </div>
+                <div class="navbuttons">
+                    <a href="#"><button class="btnnav">KIDS</button></a>
+                </div>
+                <div class="navbuttons">
+                    <a href="#"><button class="btnnav">HOME & LIVING</button></a>
+                </div>
+                <div class="navbuttons">
+                    <a href="#"><button class="btnnav">BEAUTY</button></a>
+                </div>
+                <div class="navbuttons">
+                    <a href="#"><button class="btnnav">STUDIO</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- search bar right align -->
+        <div class="search">
+            <!-- <form action="#"> -->
+                <input type="text" placeholder="Search for products, brands and more" name="search">
+                <button>
+                    <i class="fa fa-search"></i>
+                </button>
+            <!-- </form> -->
+        </div>
+        <!-- search bar right align -->
+
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+        <div class="logo2">
+
+            <div class="dropdown">
+                <a href="#"><button class="dropbtn"><i class="fa-regular fa-user"></i><br>Profile</button></a>
+
+                <!-- <div class="dropdown"> -->
+                    <!-- <button class="dropbtn">Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button> -->
+                    <div class="dropdown-content">
+                        <a href="#" id="profilename">Guest</a>
+                        <a href="login.html">login</a>
+                        <a href="registration.html">registration</a>
+                        <a href="#" onclick="logout()">logout</a>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <div class="navbuttons">
+                <a href="index.html"><button class="btnnav"><i class="fa-regular fa-heart"></i><br>Wishlist</button></a>
+            </div>
+            <div class="navbuttons">
+                <a href="index.html"><button class="btnnav"><i class="fa-solid fa-bag-shopping"></i><br>Bag</button></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div id="logbox">
+
+            <form action="login.html" class="form" onsubmit="return valcheck(event)">
+                <br>
+                <h3>Registration</h3>
+                <br>
+                <div class="inmain">
+                    <div class="div">
+                        <b><label for="">First Name</label></b><br>
+                        <input type="text" placeholder="Enter your name" id="fname">
+                    </div>
+                    <div class="sep">
+
+                    </div>
+                    <div class="div">
+                        <b><label for="">Last Name</label></b><br>
+                        <input type="text" placeholder="Enter your username" id="lname">
+                    </div>
+                </div>
+                <div class="inmain">
+                    <div class="div">
+                        <b><label for="">Email</label></b><br>
+                        <input type="email" placeholder="Enter your email" id="email">
+                    </div>
+                    <div class="sep">
+
+                    </div>
+                    <div class="div">
+                        <b><label for="">Phone Number</label></b><br>
+                        <input type="number" placeholder="Enter your number" id="number">
+                    </div>
+                </div>
+                <div class="inmain">
+                    <div class="div">
+                        <b><label for="">Password</label></b><br>
+                        <input type="password" placeholder="Enter your password"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            id="pass">
+                    </div>
+                    <div class="sep">
+
+                    </div>
+                    <div class="div">
+                        <b><label for="">Confirm Password</label></b><br>
+                        <input type="password" placeholder="Confirm your number" id="confirmpass">
+                    </div>
+                </div>
+
+
+
+                <div class="inmain">
+                    <input type="submit" id="submit">
+
+                    <!-- <button id="submit" onclick="valcheck(event)">Register</button> -->
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <script>
+
+
+        function valcheck(event) {
+            //event.preventDefault()
+            //let submit = document.getElementById('submit')
+
+            let fname = document.getElementById('fname').value
+            let lname = document.getElementById('lname').value
+            let email = document.getElementById('email').value
+
+            let number = document.getElementById("number").value
+
+            let pass = document.getElementById("pass").value
+            let confirmpass = document.getElementById("confirmpass").value
+
+            let regex =
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+
+
+            if (fname == "" || lname == "" || email == "" || number == "" || pass == "" || confirmpass == "") {
+                alert("please fill all fields")
+
+                return false
+            }
+            else if (number.length < 10 || number.length > 10) {
+                alert("enter proper number")
+                return false
+            }
+            else if (regex.test(pass) != true) {
+                alert("enter proper password")
+                return false
+            }
+            else if (confirmpass != pass) {
+                alert("your password do not match")
+                return false
+            }
+            else {
+
+
+                let getLocalData = JSON.parse(localStorage.getItem("user1"))
+
+                if (getLocalData == null) {
+                    getLocalData = []
+                    // let obj = {
+                    //     fname1: fname,
+                    //     lname1: lname,
+                    //     email1: email,
+                    //     number1: number,
+                    //     password1: pass
+
+                    // }
+                    // console.log(obj)
+                    // getLocalData = [obj]
+                    // let convToJsonString = JSON.stringify(getLocalData)
+                    // localStorage.setItem("user1", convToJsonString)
+                }
+                //else {
+
+                let getFormData = {
+                    fname1: fname,
+                    lname1: lname,
+                    email1: email,
+                    number1: number,
+                    password1: pass
+                }
+                console.log(getFormData)
+
+                try {
+                    getLocalData = [...getLocalData, getFormData]
+
+                    localStorage.setItem('user1', JSON.stringify(getLocalData))
+                }
+                catch (e) {
+                    console.log(e);
+                }
+
+
+                //}
+
+
+
+                return true
+            }
+
+            // console.log(email)
+
+
+
+        }
+
+
+
+
+    </script>
+<script src="mainscript.js"></script>
+
+</body>
+
+</html>
