@@ -170,27 +170,40 @@
             let localData = JSON.parse(localStorage.getItem("user1"))
             console.log(localData,"localdata")
 
-            let filterData = localData.filter((val)=>{
-                        return val.email1 == email.toLowerCase()
-                        // console.log(val,"fdbfg")
-             })
+            try {
+                let filterData = ""
+                 filterData = localData.filter((val) => {
+                    return val.email1 == email.toLowerCase()
+                    // console.log(val,"fdbfg")
+                })
 
-           
-            if (email == "" || pass == "") {
-                alert("please fill all fields")
 
-                return false
+
+                if (email == "" || pass == "") {
+                    alert("please fill all fields")
+
+                    return false
+                }
+
+
+                else if (email == filterData[0].email1 && pass == filterData[0].password1 && filterData[0].password1 != null && filterData[0].email1 != null && filterData !="") {
+                    //console.log(localData.email1,localData.password1)
+
+                    localStorage.setItem('isloggedinfname', filterData[0].fname1)
+                    localStorage.setItem('isloggedinlname', filterData[0].lname1)
+                    return true
+                }
+
+
+
+                else {
+                    alert("please enter valid details")
+                    return false
+                }
             }
-            else if(email==filterData[0].email1 && pass==filterData[0].password1 && filterData[0].password1 != null && filterData[0].email1 !=null ){
-                //console.log(localData.email1,localData.password1)
-
-                localStorage.setItem('isloggedinfname', filterData[0].fname1)
-                localStorage.setItem('isloggedinlname', filterData[0].lname1)
-                return true
-            }
-            
-            else{
-                alert("please enter valid details")
+            catch (error) {
+                console.log("error")
+                alert("Please enter correct details")
                 return false
             }
 
