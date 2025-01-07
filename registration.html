@@ -301,21 +301,21 @@
                 let getLocalData = JSON.parse(localStorage.getItem("user1"))
 
                 if (getLocalData == null) {
-                    getLocalData = []
-                    // let obj = {
-                    //     fname1: fname,
-                    //     lname1: lname,
-                    //     email1: email,
-                    //     number1: number,
-                    //     password1: pass
+                    //getLocalData = []
+                    let obj = {
+                        fname1: fname,
+                        lname1: lname,
+                        email1: email,
+                        number1: number,
+                        password1: pass
 
-                    // }
-                    // console.log(obj)
-                    // getLocalData = [obj]
-                    // let convToJsonString = JSON.stringify(getLocalData)
-                    // localStorage.setItem("user1", convToJsonString)
+                    }
+                    console.log(obj)
+                    getLocalData = [obj]
+                    let convToJsonString = JSON.stringify(getLocalData)
+                    localStorage.setItem("user1", convToJsonString)
                 }
-                //else {
+                else {
 
                 let getFormData = {
                     fname1: fname,
@@ -336,7 +336,7 @@
                 }
 
 
-                //}
+                }
 
 
 
