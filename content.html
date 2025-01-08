@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="clothfilter('all')">
     <div class="firstdiv" id="fdiv">
 
 
@@ -41,12 +41,16 @@
 
                 <br>
                 <br>
-                <input type="checkbox" name="" id=""><label> Sarees</label><br>
-                <input type="checkbox" name="" id=""><label> Sarees</label><br>
-                <input type="checkbox" name="" id=""><label> Sarees</label><br>
-                <input type="checkbox" name="" id=""><label> Sarees</label><br>
-                <input type="checkbox" name="" id=""><label> Sarees</label><br>
-                <input type="checkbox" name="" id=""><label> Sarees</label><br>
+                <input type="checkbox" value="" id="3" onclick="clothfilter('all')">
+                <label for="3">All</label><br>
+
+                <input type="checkbox" name="cloth" value="" id="1" onclick="clothfilter('dress')">
+                <label for="1">Dress</label><br>
+            
+                <input type="checkbox" name="cloth" value="" id="2" onclick="clothfilter('sarees')">
+                <label for="2">Sarees</label><br>
+            
+               
             </div>
             <div class="leftside2">
                 <div style="float: left;"><B>BRAND</B></div>
@@ -127,369 +131,10 @@
 
                 </div>
             </div>
-            <div class="rightsidephotocard">
-                <a href="finalpage.html" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/womendress.webp">
-                        </div>
-                        <div class="rpctext">
+            <div class="rightsidephotocard" id="maindiv">
+                
 
-                            <h3>Kalini</h3>
-                            <!-- <br> -->
-                            <h5>Kurta With Trousers & Dupatta</h5>
-                            <h5><b>RS. 1748</b> <del>RS. 4999</del> <span>(65% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="finalpage.html" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female1.jpg">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>GoSriKi</h3>
-                            <!-- <br> -->
-                            <h5>Women Kurta Set</h5>
-                            <h5><b>RS. 953</b> <del>RS. 4345</del> <span>(Rs. 3392 OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="finalpage.html" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female2.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Sangria</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered A-Line Kurta Sets</h5>
-                            <h5><b>RS. 2260</b> <del>RS. 6649</del> <span>(66% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="finalpage.html" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female3.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>kasee</h3>
-                            <!-- <br> -->
-                            <h5>Beads and Stones Saree</h5>
-                            <h5><b>RS. 2148</b> <del>RS. 7163</del> <span>(70% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="finalpage.html" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female4.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Indo Era</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered Kurta Set</h5>
-                            <h5><b>RS. 1899</b> <del>RS. 7999</del> <span>(80% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <!-- repeat -->
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/womendress.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Kalini</h3>
-                            <!-- <br> -->
-                            <h5>Kurta With Trousers & Dupatta</h5>
-                            <h5><b>RS. 1748</b> <del>RS. 4999</del> <span>(65% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female1.jpg">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>GoSriKi</h3>
-                            <!-- <br> -->
-                            <h5>Women Kurta Set</h5>
-                            <h5><b>RS. 953</b> <del>RS. 4345</del> <span>(Rs. 3392 OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female2.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Sangria</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered A-Line Kurta Sets</h5>
-                            <h5><b>RS. 2260</b> <del>RS. 6649</del> <span>(66% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female3.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>kasee</h3>
-                            <!-- <br> -->
-                            <h5>Beads and Stones Saree</h5>
-                            <h5><b>RS. 2148</b> <del>RS. 7163</del> <span>(70% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female4.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Indo Era</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered Kurta Set</h5>
-                            <h5><b>RS. 1899</b> <del>RS. 7999</del> <span>(80% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <!-- repeat -->
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/womendress.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Kalini</h3>
-                            <!-- <br> -->
-                            <h5>Kurta With Trousers & Dupatta</h5>
-                            <h5><b>RS. 1748</b> <del>RS. 4999</del> <span>(65% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female1.jpg">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>GoSriKi</h3>
-                            <!-- <br> -->
-                            <h5>Women Kurta Set</h5>
-                            <h5><b>RS. 953</b> <del>RS. 4345</del> <span>(Rs. 3392 OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female2.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Sangria</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered A-Line Kurta Sets</h5>
-                            <h5><b>RS. 2260</b> <del>RS. 6649</del> <span>(66% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female3.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>kasee</h3>
-                            <!-- <br> -->
-                            <h5>Beads and Stones Saree</h5>
-                            <h5><b>RS. 2148</b> <del>RS. 7163</del> <span>(70% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female4.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Indo Era</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered Kurta Set</h5>
-                            <h5><b>RS. 1899</b> <del>RS. 7999</del> <span>(80% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <!-- repeat -->
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/womendress.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Kalini</h3>
-                            <!-- <br> -->
-                            <h5>Kurta With Trousers & Dupatta</h5>
-                            <h5><b>RS. 1748</b> <del>RS. 4999</del> <span>(65% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female1.jpg">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>GoSriKi</h3>
-                            <!-- <br> -->
-                            <h5>Women Kurta Set</h5>
-                            <h5><b>RS. 953</b> <del>RS. 4345</del> <span>(Rs. 3392 OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female2.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Sangria</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered A-Line Kurta Sets</h5>
-                            <h5><b>RS. 2260</b> <del>RS. 6649</del> <span>(66% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female3.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>kasee</h3>
-                            <!-- <br> -->
-                            <h5>Beads and Stones Saree</h5>
-                            <h5><b>RS. 2148</b> <del>RS. 7163</del> <span>(70% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-
-                <a href="" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="images/female4.webp">
-                        </div>
-                        <div class="rpctext">
-
-                            <h3>Indo Era</h3>
-                            <!-- <br> -->
-                            <h5>Embroidered Kurta Set</h5>
-                            <h5><b>RS. 1899</b> <del>RS. 7999</del> <span>(80% OFF)</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
+               
 
                 <!-- repeat -->
 
@@ -533,6 +178,236 @@
             window.location.href = "index.html"
         }
 
+
+
+        let data = [
+            {
+                Name: "Kalini",
+                description:"Kurta With Trousers & Dupatta",
+                text: "RS. 1748",
+                oldprice:"RS. 4999",
+                link: "images/womendress.webp",
+                category: "dress",
+                href:"finalpage.html",
+                off:"(60% OFF)"
+            },
+            {
+                Name: "dress 2",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/female1.jpg",
+                category: "dress",
+                href:"finalpage.html",
+                off:"(65% OFF)"
+            },
+            {
+                Name: "saree1",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/female3.webp",
+                category: "sarees",
+                href:"finalpage.html",
+                off:"(65% OFF)"
+            },
+            {
+                Name: "saree 2",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/saree.webp",
+                category: "sarees",
+                href:"finalpage.html",
+                off:"(70% OFF)"
+            },
+            {
+                Name: "dress 3",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/female2.webp",
+                category: "dress",
+                href:"finalpage.html",
+                off:"(50% OFF)"
+            },
+            {
+                Name: "Kalini",
+                description:"Kurta With Trousers & Dupatta",
+                text: "RS. 1748",
+                oldprice:"RS. 4999",
+                link: "images/womendress.webp",
+                category: "dress",
+                href:"finalpage.html",
+                off:"(60% OFF)"
+            },
+            {
+                Name: "dress 3",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/female1.jpg",
+                category: "dress",
+                href:"finalpage.html",
+                off:"(65% OFF)"
+            },
+            {
+                Name: "saree 3",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/female3.webp",
+                category: "sarees",
+                href:"finalpage.html",
+                off:"(65% OFF)"
+            },
+            {
+                Name: "saree 4",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/saree.webp",
+                category: "sarees",
+                href:"finalpage.html",
+                off:"(70% OFF)"
+            },
+            {
+                Name: "dress 4",
+                description:"Kurta With Trousers & Dupatta",
+                text: "₹2748",
+                oldprice:"RS. 4999",
+                link: "images/female2.webp",
+                category: "dress",
+                href:"finalpage.html",
+                off:"(50% OFF)"
+            }
+
+        ]
+
+
+
+        function clothfilter(category) {
+            let filterData = data.filter((val) => {
+                return val.category == category
+            })
+
+            let pp = document.getElementById('1').checked
+            console.log(pp)
+
+            console.log(filterData, "filter")
+
+
+            let checkboxdresss = document.getElementById('1');
+            let checkboxsaree = document.getElementById('2');
+            let checkboxall = document.getElementById('3');
+
+
+            if (category != 'all') {
+                checkboxall.checked=false
+
+                if (checkboxdresss.checked == true) {
+
+                    if (checkboxdresss.value == "") {
+                        checkboxdresss.value = mapdataall()
+                    }
+
+                }
+
+                if (checkboxsaree.checked == true) {
+                    if (checkboxsaree.value == "") {
+                        checkboxsaree.value = mapdataall()
+                    }
+                   
+                }
+
+
+                let checkboxes = document.getElementsByName('cloth')
+
+                let result = "";
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        // if (checkboxes[i] != 0) {
+                        if (result == "") {
+                            result = checkboxes[i].value
+                        }
+                        else {
+                            result = result + checkboxes[i].value
+                        }
+
+                        // }
+
+                    }
+                    document.getElementById('maindiv').innerHTML = result
+
+
+                }
+            }
+            else {
+
+                document.getElementById('maindiv').innerHTML = ""
+                checkboxdresss.checked=false
+                checkboxsaree.checked=false
+                checkboxall.check=true
+
+                let mapdata2 = data.map((val) => {
+                    return `<a href="${val.href}" style="text-decoration: none;">
+                    <div class="rphotocard">
+                        <div class="rpcimg">
+                            <img style="height: 100% ;width: 100%;" src="${val.link}">
+                        </div>
+                        <div class="rpctext">
+
+                            <h3>${val.Name}</h3>
+                            <!-- <br> -->
+                            <h5>${val.description}</h5>
+                            <h5><b>${val.text}</b> <del>${val.oldprice}</del> <span>${val.off}</span></h5>
+
+
+                        </div>
+
+                    </div>
+                </a>
+                        `
+                })
+
+                document.getElementById('maindiv').innerHTML = mapdata2.join("")
+            }
+
+
+
+            function mapdataall() {
+                let mapdata = filterData.map((val) => {
+                    return `<a href="${val.href}" style="text-decoration: none;">
+                    <div class="rphotocard">
+                        <div class="rpcimg">
+                            <img style="height: 100% ;width: 100%;" src="${val.link}">
+                        </div>
+                        <div class="rpctext">
+
+                            <h3>${val.Name}</h3>
+                            <!-- <br> -->
+                            <h5>${val.description}</h5>
+                            <h5><b>${val.text}</b> <del>${val.oldprice}</del> <span>${val.off}</span></h5>
+
+
+                        </div>
+
+                    </div>
+                </a>
+                        `
+                })
+
+                let map = mapdata.join("")
+                let maindiv = document.getElementById('maindiv')
+
+                return map
+
+            }
+
+
+
+
+        }
     </script>
 </body>
 
