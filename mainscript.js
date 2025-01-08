@@ -18,9 +18,3 @@ console.log(fletter.toUpperCase(), lletter.toUpperCase())
 profilename.innerHTML = fletter.toUpperCase()+" "+ lletter.toUpperCase()
 
 
-
-function logout() {
-    localStorage.removeItem("isloggedinfname")
-    localStorage.removeItem("isloggedinlname")
-    window.location.href = "index.html"
-}

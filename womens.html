@@ -59,21 +59,21 @@
             </div>
         </a>
         <a href="content.html">
-        <div class="photocard">
-            <div class="pcimg">
-                <img style="height: 100% ;width: 100%;" src="images/womensactive.webp">
+            <div class="photocard">
+                <div class="pcimg">
+                    <img style="height: 100% ;width: 100%;" src="images/womensactive.webp">
+                </div>
+                <div class="pctext">
+
+                    Womens's Activeware
+                    <br>
+                    <h1>30-70% OFF</h1>
+                    <p>Shop Now</p>
+
+
+                </div>
+
             </div>
-            <div class="pctext">
-
-                Womens's Activeware
-                <br>
-                <h1>30-70% OFF</h1>
-                <p>Shop Now</p>
-
-
-            </div>
-
-        </div>
         </a>
 
         <div class="photocard">
@@ -136,8 +136,16 @@
     <a href="#top">
         <div class="child" id="child1"><i class="fa-solid fa-2x fa-arrow-up"></i></div>
     </a>
-    <script src="mainscript.js"></script>
     <script type="module" src="index.js"></script>
+    <script type="module" src="mainscript.js"></script>
+    <script>
+        function logout() {
+            localStorage.removeItem("isloggedinfname")
+            localStorage.removeItem("isloggedinlname")
+            window.location.href = "index.html"
+        }
+
+    </script>
 </body>
 
 </html>

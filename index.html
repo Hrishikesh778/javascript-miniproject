@@ -211,9 +211,6 @@
     <div class="footer" id="footer1">
 
 
-      
-
-
     </div>
 
     <a href="#top">
@@ -221,8 +218,17 @@
     </a>
 
 
-    <script src="mainscript.js"></script>
+   
     <script type="module" src="index.js"></script>
+    <script type="module" src="mainscript.js"></script>
+    <script>
+        function logout() {
+            localStorage.removeItem("isloggedinfname")
+            localStorage.removeItem("isloggedinlname")
+            window.location.href = "index.html"
+        }
+
+    </script>
 </body>
 
 </html>

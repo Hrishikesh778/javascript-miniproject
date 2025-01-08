@@ -524,8 +524,16 @@
         <div class="child" id="child1"><i class="fa-solid fa-2x fa-arrow-up"></i></div>
     </a>
 
-    <script src="mainscript.js"></script>
     <script type="module" src="index.js"></script>
+    <script type="module" src="mainscript.js"></script>
+    <script>
+        function logout() {
+            localStorage.removeItem("isloggedinfname")
+            localStorage.removeItem("isloggedinlname")
+            window.location.href = "index.html"
+        }
+
+    </script>
 </body>
 
 </html>
