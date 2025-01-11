@@ -302,87 +302,52 @@
             let checkboxall = document.getElementById('3');
 
 
-            if (category != 'all') {
-                checkboxall.checked = false
+            // if (category != 'all') {
+            checkboxall.checked = false
 
-                if (checkboxdresss.checked == true || checkboxsaree.checked == true) {
-                    if (checkboxdresss.checked == true) {
+            if (checkboxdresss.checked == true || checkboxsaree.checked == true) {
+                if (checkboxdresss.checked == true) {
 
-                        if (checkboxdresss.value == "") {
-                            checkboxdresss.value = mapdataall()
-                        }
-
+                    if (checkboxdresss.value == "") {
+                        checkboxdresss.value = mapdataall()
                     }
 
-                    if (checkboxsaree.checked == true) {
-                        if (checkboxsaree.value == "") {
-                            checkboxsaree.value = mapdataall()
-                        }
-
-                    }
-
-
-                    let checkboxes = document.getElementsByName('cloth')
-
-                    let result = "";
-                    for (var i = 0; i < checkboxes.length; i++) {
-                        if (checkboxes[i].checked) {
-                            // if (checkboxes[i] != 0) {
-                            if (result == "") {
-                                result = checkboxes[i].value
-                            }
-                            else {
-                                result = result + checkboxes[i].value
-                            }
-
-                            // }
-
-                        }
-                        document.getElementById('maindiv').innerHTML = result
-
-
-                    }
                 }
-                else {
-                    document.getElementById('maindiv').innerHTML = ""
-                    checkboxdresss.checked = false
-                    checkboxsaree.checked = false
-                    checkboxall.check = true
 
-                    let mapdata2 = data.map((val) => {
-                        return `<a href="${val.href}" style="text-decoration: none;">
-                    <div class="rphotocard">
-                        <div class="rpcimg">
-                            <img style="height: 100% ;width: 100%;" src="${val.link}">
-                        </div>
-                        <div class="rpctext">
+                if (checkboxsaree.checked == true) {
+                    if (checkboxsaree.value == "") {
+                        checkboxsaree.value = mapdataall()
+                    }
 
-                            <h3>${val.Name}</h3>
-                            <!-- <br> -->
-                            <h5>${val.description}</h5>
-                            <h5><b>${val.text}</b> <del>${val.oldprice}</del> <span>${val.off}</span></h5>
-
-
-                        </div>
-
-                    </div>
-                </a>
-                        `
-                    })
-
-                    document.getElementById('maindiv').innerHTML = mapdata2.join("")
                 }
 
 
+                let checkboxes = document.getElementsByName('cloth')
+
+                let result = "";
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        // if (checkboxes[i] != 0) {
+                        if (result == "") {
+                            result = checkboxes[i].value
+                        }
+                        else {
+                            result = result + checkboxes[i].value
+                        }
+
+                        // }
+
+                    }
+                    document.getElementById('maindiv').innerHTML = result
 
 
+                }
             }
             else {
-
                 document.getElementById('maindiv').innerHTML = ""
                 checkboxdresss.checked = false
                 checkboxsaree.checked = false
-                checkboxall.check = true
+                checkboxall.checked = true
 
                 let mapdata2 = data.map((val) => {
                     return `<a href="${val.href}" style="text-decoration: none;">
@@ -407,6 +372,41 @@
 
                 document.getElementById('maindiv').innerHTML = mapdata2.join("")
             }
+
+
+
+
+            // }
+            // else {
+
+            //     document.getElementById('maindiv').innerHTML = ""
+            //     checkboxdresss.checked = false
+            //     checkboxsaree.checked = false
+            //     checkboxall.checked = true
+
+            //     let mapdata2 = data.map((val) => {
+            //         return `<a href="${val.href}" style="text-decoration: none;">
+            //         <div class="rphotocard">
+            //             <div class="rpcimg">
+            //                 <img style="height: 100% ;width: 100%;" src="${val.link}">
+            //             </div>
+            //             <div class="rpctext">
+
+            //                 <h3>${val.Name}</h3>
+            //                 <!-- <br> -->
+            //                 <h5>${val.description}</h5>
+            //                 <h5><b>${val.text}</b> <del>${val.oldprice}</del> <span>${val.off}</span></h5>
+
+
+            //             </div>
+
+            //         </div>
+            //     </a>
+            //             `
+            //     })
+
+            //     document.getElementById('maindiv').innerHTML = mapdata2.join("")
+            // }
 
 
 
